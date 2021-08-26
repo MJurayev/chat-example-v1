@@ -12,7 +12,6 @@
 
 # misc
 config.json
-config.example.json
 .DS_Store
 .env.local
 .env
