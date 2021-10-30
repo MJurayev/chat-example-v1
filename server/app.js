@@ -7,6 +7,8 @@ const path = require('path')
 app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+
+
 //startup packages
 require('dotenv').config()
 require('./src/startup/db') 
@@ -26,5 +28,4 @@ const port = process.env.PORT || 8000
 http.listen(port,()=>{
   console.log(`${port} - portda dastur ishlayapti....`)
 })
-// require('./src/socket/ws')(http)
 require('./src/socket/socket')(http)
